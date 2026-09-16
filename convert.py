@@ -147,7 +147,7 @@ def main():
         raise SystemExit("ERROR: No chapter headings were detected.")
 
     title = "AI Engineering: Building Applications with Foundation Models"
-    book_dir = OUTPUT_FOLDER / f"{safe_name(pdf_path.stem)}-cleaned"
+    book_dir = OUTPUT_FOLDER / "client-sample"
     if book_dir.exists():
         shutil.rmtree(book_dir)
     chapters_dir = book_dir / "chapters"

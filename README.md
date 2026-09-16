@@ -10,7 +10,7 @@ Place a PDF in `input/`, then run:
 python convert.py
 ```
 
-The converter creates a cleaned book folder in `output/` containing:
+The converter creates `output/client-sample/` containing:
 
 - `chapters/` with one Markdown file per chapter
 - YAML frontmatter for each chapter
