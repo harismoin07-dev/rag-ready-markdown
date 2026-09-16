@@ -1,0 +1,4 @@
+﻿input/
+output/*.md
+output/*_detection_report.txt
+__pycache__/
