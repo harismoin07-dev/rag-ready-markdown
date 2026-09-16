@@ -1,36 +1,56 @@
 # RAG Ready Markdown
 
-`rag-ready-markdown` is intended to convert text-based source content into cleaned, structured Markdown tailored for:
+`rag-ready-markdown` aims to convert text-based source content into cleaned, structured Markdown tailored for:
 
 - RAG ingestion pipelines
 - Knowledge-management systems
 - Searchable internal documentation
 
-Current status: repository scope and workflow definition. A concrete CLI/library interface is not yet implemented.
-Today, this repository serves as a specification for supported inputs and normalization goals.
-Next milestone: add an initial converter implementation for `.txt` and `.md` inputs.
+## Repository status
+
+Current status: documentation-only project brief. A concrete CLI/library interface is not yet implemented.
+Today, this repository serves as a proposed specification for supported inputs and normalization goals.
+Next milestone: implement an initial converter for `.txt` and `.md` inputs.
+No runnable examples or converter acceptance tests are included yet.
 
 ## Proposed workflow
 
+Future workflow once implemented:
+
 1. Provide supported text-based input (`.txt` or existing `.md`).
-2. Apply the repository's planned normalization and structuring workflow to produce clean Markdown.
+2. Apply the planned normalization and structuring workflow to produce clean Markdown.
 3. Send the cleaned Markdown output to your chunking/embedding pipeline.
 
-## What it does
+## RAG-ready definition
 
-- Processes supported text-based source content.
-- Normalizes noisy formatting.
-- Structures content into consistent Markdown sections.
-- Outputs Markdown that is easier to chunk, embed, and retrieve.
+In this repository, "RAG-ready" means Markdown output that is predictable, clean, and easy to split into semantically meaningful chunks.
 
-## Scope
+## What you can do now
+
+- Review and refine the proposed scope.
+- Propose normalization and Markdown-structuring rules.
+- Help define the first CLI/library converter interface.
+
+## Planned converter behavior
+
+- Will process supported text-based source content.
+- Will normalize noisy formatting.
+- Will structure content into consistent Markdown sections.
+- Will output Markdown that is easier to chunk, embed, and retrieve.
+
+Expected normalization and structuring rules include:
+
+- Remove repeated whitespace and empty-line noise.
+- Preserve heading hierarchy and section boundaries.
+- Normalize list and paragraph formatting for consistent chunking.
+
+## Proposed scope (first implementation milestone)
 
 Supported inputs include:
 
 - `.txt` plain text content
 - existing `.md` Markdown content
 
-Not supported at this time:
+Not supported in the first milestone:
 
-- PDF files (both machine-readable and image-based)
-- Scanned documents and other OCR-dependent sources
+- PDF inputs and other OCR-dependent document sources (including scanned documents)
