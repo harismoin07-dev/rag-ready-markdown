@@ -1,6 +1,6 @@
-# PDF to Markdown Converter
+# rag-ready-markdown
 
-This project converts a text-extractable PDF into cleaned, structured Markdown suitable for RAG ingestion and knowledge-management workflows.
+This project converts text-extractable documents into cleaned, structured Markdown suitable for RAG ingestion and knowledge-management workflows.
 
 ## Run
 
